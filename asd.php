@@ -13,6 +13,12 @@ class PostController extends Controller
 {
     public function store(Request $request, string $id): Response
     {
+        if (!auth()->id()) {
+            return [
+                'success' => false,
+                'error' => 'unauthoriyed'
+            ];
+        }
         if ($request->input('title') && $request->input('title') == '') {
             return [
                 'success' => false,
