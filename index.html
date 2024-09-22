@@ -27,17 +27,89 @@
             <li class="fragment">Separate business logic</li>
             <li class="fragment">Use model relationship</li>
             <li class="fragment">Use API Resources</li>
-            <li class="fragment"></li>
+            <li class="fragment">Is this better?</li>
+            <li class="fragment">Is it only for Laravel</li>
+            <li class="fragment">Questions and fight ⚔️</li>
           </ol>
         </section>
-        <section>The test subject</section>
         <section>
-          <section>Vertical Slide 1</section>
-          <section>Vertical Slide 2</section>
+          <h3>The test subject</h3>
+          <img src="/images/1-step.png" alt="">
         </section>
-        <section>Validation</section>
+        <section>
+          <section>
+            <h4>The problems</h4>
+            <ul>
+              <li>
+                Multiple SOLID violations
+                <ul>
+                  <li class="fragment">S: authorization check, validation, business logic and data persistence in a single method</li>
+                  <li class="fragment">O: hardcoded checks (e.g., user role comparison and error responses)</li>
+                  <li class="fragment">D: directly depends on auth() and request()</li>
+                </ul>
+              </li>
+              <li class="fragment">
+                Testing
+                <ul class="fragment">
+                  <li>can only be tested with an HTTP call</li>
+                </ul>
+              </li>
+              <li class="fragment">
+                Complexity
+                <ul class="fragment">
+                  <li>too many returns and conditions</li>
+                  <li>hard to understand</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h4>The problems are endless...</h4>
+            <ul>
+              <li class="fragment">
+                Magic strings
+                <ul class="fragment">
+                  <li>error messages as plain text</li>
+                </ul>
+              </li>
+              <li class="fragment">
+                Code duplication
+                <ul class="fragment">
+                  <li>repeated use of request input read</li>
+                  <li>hard to maintain</li>
+                </ul>
+              </li>
+              <li class="fragment">
+                Error handling
+                <ul class="fragment">
+                  <li>no valid HTTP status code used</li>
+                  <li>need unnecessary checks on client side</li>
+                </ul>
+              </li>
+              <li class="fragment">
+                API versioning
+                <ul class="fragment">
+                  <li>can't make change unless breaking the current code</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <h3 class="r-fit">
+            Let's refactor it
+          </h3>
+        </section>
         <section>Slide 5</section>
-        <section>Slide 6</section>
+        <section>
+          <h3>Is this better?</h3>
+        </section>
+        <section>
+          <h3>Is it only for Laravel</h3>
+        </section>
+        <section>
+          <h3>Questions and fight ⚔️</h3>
+        </section>
       </div>
     </div>
     <script type="module" src="/main.js"></script>
